@@ -1,14 +1,17 @@
+#define principal function
 def main():
     pounds = pounds_to_float(input("How much was the meal? "))
     percent = percent_to_float(input("What percentage would you like to charge? "))
     charge = pounds * percent
     print(f"Charge £{charge:.2f}")
 
-
 def pounds_to_float(d):
-    # TODO
+# taking decimal d and returning it as a float with £ emitted
+    return float(d.replace("£", ""))
 
 def percent_to_float(p):
-    # TODO
+# taking percentage P and returning it as a float decimal (hence /100) with % emitted
+    return float(p.replace("%", ""))/100
 
+# call on main to perform function
 main()
